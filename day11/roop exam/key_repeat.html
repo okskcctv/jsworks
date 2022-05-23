@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키 반복</title>
+</head>
+<body>
+    <script>
+        while(1){
+            let key = prompt("계속 반복 할까요? ", "y/n");
+            if(key == 'y' || key == 'Y'){
+                alert("계속 반복합니다.");
+            }
+            else if(key == 'n' || key == 'N'){
+                alert("반복을 중단합니다.");
+                break;
+            }
+            else if(key == null){
+                alert("반복을 중단합니다. 어, 중..중단이 안 돼. 중단시킬 수가 없어.");
+            }
+            else{
+                alert("키를 잘못 누르셨습니다.");
+            }
+        }
+        document.write("프로그램 종료!");
+    </script>
+</body>
+</html>
