@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch ~ case</title>
+    <style>
+        body{background: rgb(6, 6, 253); color: rgb(233, 231, 231);}
+        p{
+            margin-top: 50px;
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 1px 2x 1px #000;
+        }
+        p strong{color: yellow; font-size:1.5em;}
+    </style>
+</head>
+<body>
+    <script>
+        let session = prompt("관심 세션을 선택해 주세요", "1-마케팅, 2-개발, 3-디자인");
+
+        switch(Number(session)){
+            case 1:
+                document.write("<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>");
+                break;
+            case 2:
+                document.write("<p>개발 세션은 <strong>202호</strong>에서 진행됩니다.</p>");
+                break;
+            case 3:
+                document.write("<p>디자인 세션은 <strong>203호</strong>에서 진행됩니다.</p>");
+                break;
+            default:
+                document.write("<p>잘못 입력하셨습니다.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 예제</title>
+</head>
+<body>
+    <script>
+        // let age = 15;
+
+        // if(age >= 15){
+        //     document.write("드라마 관람가");
+        // }
+        // else{
+        //     document.write("드라마 관람불가");
+        // }
+        // document.write("<br>나이는 " + age + "세입니다.");
+
+
+        /* 필기 점수가 60점 이상이면 합격 아니면 불합격
+        let score = 65;
+
+        if(score >= 60){
+            document.write("합격입니다.");
+        }
+        else{
+            document.write("불합격입니다.");
+        }
+        document.write("<br>점수는 " + score + "점입니다."); */
+
+        // 필기 60점 이상 실기 점수가 70점 이상 합격
+        let score1 = 75, score2 = 65;
+
+        score1 = Number(prompt("필기점수를 입력해주세요", "0~100"));
+        score2 = Number(prompt("실기점수를 입력해주세요", "0~100"));
+
+
+        if(score1 >= 60 && score2 >= 70){
+            document.write("합격입니다.");
+        }
+        else{
+            document.write("불합격입니다.");
+        }
+        document.write("<br>필기 점수는 " + score1 + "점, 실기 점수는 " + score2 + "점입니다.");
+
+
+
+        if(score1 < 60 && score2 < 70){
+            document.write("<br>필기, 실기 모두 떨어지셨습니다.");
+        }
+        else if(score1 < 60 && score2 >= 70){
+            document.write("<br>필기에 떨어지셨습니다.");
+        }
+        else if(score1 >= 60 && score2 < 70){
+            document.write("<br>실기에 떨어지셨습니다.");
+        }
+        else{
+
+        }
+    </script>
+</body>
+</html>

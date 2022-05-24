@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 랜덤 값을 위한 함수
+        let rand1 = Math.floor(Math.random() * 5) + 1, rand2 = Math.floor(Math.random() * 5) + 1;
+        for(let i=1; i<=5; i++){
+            for(let j=1; j<=5; j++){
+                // 랜덤한 위치에 '나' 출현
+                if(i === rand1 && j === rand2){
+                    document.write('<a href="./forfor.html">나</a>');
+                    continue;
+                }
+                document.write("가");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for(let i=1; i<=5; i++){
+            for(let j=1; j<=i; j++){
+                document.write("$");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for(let i=5; i>=1; i--){
+            for(let j=1; j<=i; j++){
+                document.write("$");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
