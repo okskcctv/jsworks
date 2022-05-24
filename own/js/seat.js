@@ -1,10 +1,13 @@
+let colN; // 열의 수 선언
 let people = prompt("입장객은 몇 명인가요?"); // 입장객 수
 if(people === null){
-
+    window.close();
 }
-let colN = prompt("한 줄에 몇 명 앉나요?"); // 열의 수
-if(colN === null){
-    location.reload();
+else{
+    colN = prompt("한 줄에 몇 명 앉나요?"); // 열의 수
+    if(colN === null){
+        window.close();
+    }
 }
 people = Number(people);
 colN = Number(colN);
