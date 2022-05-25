@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 정의와 호출</title>
+</head>
+<body>
+    <script>
+        // 함수 선언
+        // return이 없는 함수
+        // 매개변수가 없는 함수
+        function sayHello(){
+            document.write("Hello~<br>");    
+        }
+
+        // 매개변수가 있는 함수
+        function sayHello2(name){
+            document.write("Hello~ " + name + "<br>");    
+        }
+
+        // 호출
+        sayHello();
+        sayHello();
+
+        sayHello2('철수');
+        sayHello2('영희');
+    </script>
+</body>
+</html>

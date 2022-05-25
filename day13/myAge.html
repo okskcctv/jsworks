@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>절댓값을 계산하는 함수</title>
+</head>
+<body>
+    <button type="button" onclick="calClick()">계산</button>
+    <p id="age"></p>
+    <script>
+        let age;
+        function myAge(x){
+            if(x >= 0){
+                document.getElementById("age").innerHTML = "나이는 " + x;
+            }
+            else{
+                document.getElementById("age").innerHTML = "나이는 " + -x;
+            }
+        }
+        function calClick(){
+            age = parseInt(prompt("나이를 입력해주세요."));
+            myAge(age);
+        }
+    </script>
+</body>
+</html>
