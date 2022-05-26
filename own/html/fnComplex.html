@@ -8,6 +8,27 @@
 </head>
 <body>
     <script>
+        let n1 = prompt("첫 숫자를 입력해 주세요");
+        if(n1 === null){
+            n1 = 0;
+        }
+        else if(n1 === ""){
+            n1 = 1;
+        }
+        else{
+            n1 = parseInt(n1);
+        }
+        let n2 = prompt("둘째 숫자를 입력해 주세요");
+        if(n2 === null){
+            n2 = 0;
+        }
+        else if(n2 === ""){
+            n2 = 1;
+        }
+        else{
+            n2 = parseInt(n2);
+        }
+
         function fnComplex(x, y){
             if(x === y){
                 return x * y;
@@ -20,12 +41,9 @@
             document.write("<br>");
         }
 
-        let num1 = fnComplex(10, 10);
-        let num2 = fnComplex(5, 10);
+        let result = fnComplex(n1, n2);
         
-        document.write("num1 = " + num1);
-        br();
-        document.write("num2 = " + num2);
+        document.write("result = " + result);
     </script>
 </body>
 </html>
