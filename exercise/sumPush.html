@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1부터 10까지 홀수를 사용한 합</title>
+    <script>
+        let number = new Array(5);
+        let sumV = 0; // 총합을 저장하기 위한 변수 선언
+        // 처음 배열에 넣어줄 때는 let - in 을 사용하면 입력이 안됨
+        for(let i=0; i<number.length; i++){
+            number[i] = i * 2 + 1;
+            sumV += number[i]; // 총합을 계산
+        }
+
+        // 총합을 배열 맨 뒤에 넣어줌
+        number.push(sumV);
+
+        // 배열 출력
+        for(let i=0; i<number.length; i++){
+            document.write(number[i] + " ");
+        }
+
+        document.write("<br>");
+        // let (변수) in (배열함수명) 테스트를 위한 출력문
+        for(let item in number){
+            document.write(number[item] + " ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

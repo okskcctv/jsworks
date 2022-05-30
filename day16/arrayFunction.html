@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체의 함수</title>
+    <script>
+        let number = [1, 2, 3];
+
+        number.push(4); // 맨 뒤에 4를 추가 - push
+
+        // 인덱스로 출력
+        for(let i=0; i<number.length; i++){
+            document.write(number[i] + " ");
+        }
+
+        document.write("<br>");
+        // for - in문으로 출력
+        // for(let item in number){
+        //     document.write(number[item] + " ");
+        // }
+
+        number.pop(); // 맨 뒤에서 4를 제거 - pop
+
+        for(let item in number){
+            document.write(number[item] + " ");
+        }
+
+        document.write("<br>");
+        // 맨 앞에 추가 - unshift
+        number.unshift(0);
+
+        for(let item in number){
+            document.write(number[item] + " ");
+        }
+
+        document.write("<br>");
+        // 맨 앞에 제거 - shift
+        number.shift();
+
+        for(let item in number){
+            document.write(number[item] + " ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

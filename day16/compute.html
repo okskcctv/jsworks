@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수</title>
+    <script>
+        // 선언적 함수
+        function compute(){
+            let x = 10;
+            let y = 100;
+            let result = x / y;
+            console.log(result);
+        }
+        compute();
+
+        // 익명 함수 - 익명함수는 변수 선언 전에는 호출할 수 없음
+        // 변수에 함수를 대입
+        let compute2 = function(){
+            let x = 10;
+            let y = 100;
+            let result = x / y;
+            console.log(result);
+        };
+        compute2();
+
+        // 1부터 10까지 출력하는 함수
+        let number = function(x){
+            for(let i=1; i<=x; i++){
+                console.log(i);
+            }
+        };
+        number(20);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
