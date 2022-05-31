@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 당첨자 추첨(배열)</title>
+    <style>
+        section{
+            width: 800px; margin: 0 auto;
+            text-align: center;
+        }
+        h1{
+            display: inline-block;
+            padding: 10px 20px;
+            background: #eee;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        p{text-align: center; font-size: 1.5em;}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>로또 추첨 번호</h1>
+    </section>
+    <script>
+        let number = 45; // 로또 숫자
+        let lotto = new Array(6); // 뽑을 숫자
+        // 뽑기 시작
+        for(let i=0; i<lotto.length; i++){
+            let pickedOne = Math.floor(Math.random()*number) + 1;
+            lotto[i] = pickedOne;
+            for(let j=0; j<i; j++){
+                if(lotto[j] == lotto[i]) // 이전 인덱스와 갑이 같으면 재추첨
+                    i--;
+            }
+        }
+        // 보기 편하게 정렬
+        lotto.sort(function(a, b){
+            return a - b;
+        });
+        //출력
+        document.write("<p>번호 : ");
+        for(let i=0; i<lotto.length; i++){
+            document.write(lotto[i]);
+            if(i<lotto.length-1) // 마지막에 , 있는거 불편해서 뺌
+            document.write(", ");
+        }
+        document.write("</p>");
+    </script>
+</body>
+</html>

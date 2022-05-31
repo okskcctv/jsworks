@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 함수</title>
+    <script>
+        window.onload = function(){
+            let pic = document.getElementById("pic");
+
+            // let click = true;
+            // pic.onclick = changePic; // 함수 호출 (괄호없음)
+            // function changePic(){
+            //     if(!click){
+            //         pic.src = "./images/cup-1.png";
+            //         click = true;
+            //     }
+            //     else{
+            //         pic.src = "./images/cup-2.png";
+            //         click = false;
+            //     }
+            // }
+
+            let sw = false; // sw변수는 상태를 저장하는 변수
+            pic.onclick = function(){
+                if(sw){
+                    pic.src= "./images/cup-1.png";
+                    sw = false;
+                }
+                else{
+                    pic.src = "./images/cup-2.png";
+                    sw = true;
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <!-- javascript의 객체의 이벤트 함수를 이용함 -->
+    <div>
+        <img src="./images/cup-1.png" id="pic" alt="붉은색 찻잔">
+    </div>
+</body>
+</html>

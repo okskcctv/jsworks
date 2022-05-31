@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 객체의 함수</title>
+    <script>
+        console.log(Math.max(10, 20, 30, 15, 55, 35));
+        console.log(Math.min(10, 20, 30, 15, 55, 35));
+
+        console.log(Math.ceil(10.2)); // 올림
+        console.log(Math.round(10.2)); // 반올림
+        console.log(Math.floor(10.2)); // 내림
+
+        console.log(Math.sqrt(16)); // 제곱근
+
+        console.log(Math.pow(2, 3)); // 거듭제곱
+
+        console.log(Math.abs(-10)); // 절댓값
+
+        // 절댓값 만들기
+        function myAbs(x){
+            if(x < 0){
+                return -x;
+            }
+            else{
+                return x;
+            }
+        }
+        console.log(myAbs(-10));
+        console.log(myAbs(10));
+
+        // 거듭제곱 만들기
+        function myPow(x, y){
+            let sum = 1;
+            for(let i=0; i<y; i++){
+                sum *= x;
+            }
+            return sum;
+        }
+
+        console.log(myPow(2, 3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

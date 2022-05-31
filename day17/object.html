@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+    <script>
+        // substring(a, b) -> a번부터 b번 이전까지의 문자 반환
+        let str1 = "Javascript";
+        console.log(str1.substring(4, 9));
+        console.log(str1.substring(4));
+
+        // split("") -> 구분 기호로 문자열을 분할하고 분할한 문자열들을 배열로 저장함
+        let str2 = "Javascript_jQuery";
+        let division = str2.split("_");
+        console.log(division[0] + ", " + division[1]);
+
+        // replace('a', 'b') a를 b로 변경
+        let str3 = "Javascript";
+        console.log(str3.replace("Java", "jQuery"));
+
+        // trim() 공백 제거 함수
+        let str4 = " javascript ";
+        console.log(str4.trim());
+
+        // uppercase 와 lowwercasek
+        let word = "Thank you"
+        console.log(word.toUpperCase());
+        console.log(word.toLowerCase());
+
+        let animal = "dog, cat, horse, cow";
+        let animalList = animal.split(", ");
+        console.log(animalList);
+        for(let i=0; i<animalList.length; i++){
+            console.log(animalList[i]);
+        }
+        for(let item in animalList){
+            console.log(animalList[item]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

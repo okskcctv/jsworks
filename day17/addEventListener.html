@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener() 함수 사용</title>
+</head>
+<body>
+    <div>
+        <img src="./images/easys-1.jpg" id="pic" alt="뭐임? 진짜 뭐임??">
+    </div>
+    <script>
+        /* let pic = document.querySelector("#pic");
+        
+        pic.addEventListener("mouseover", changePic);
+        pic.addEventListener("mouseout", originPic);
+
+        function changePic(){
+            pic.src = "./images/easys-2.jpg";
+        }
+        function originPic(){
+            pic.src = "./images/easys-1.jpg";
+        } */
+
+        // 실행함수로 구현
+
+        pic.addEventListener("mouseover", function(){
+            pic.src = "./images/easys-2.jpg";
+            pic.alt = "오류니?";
+        });
+        pic.addEventListener("mouseout", function(){
+            pic.src = "./images/easys-1.jpg";
+        });
+    </script>
+</body>
+</html>
