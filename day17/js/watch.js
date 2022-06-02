@@ -8,8 +8,20 @@
 // }
 
 // 실행함수
-setInterval(function watch(){
+let timer = setInterval(function watch(){
     const DATE = new Date();
     let now = DATE.toLocaleTimeString();
     document.getElementById("display").innerHTML = now;
 }, 1000);
+
+function myStop(){
+    clearInterval(timer);
+}
+
+function myCon(){
+    setInterval(function watch(){
+        const DATE = new Date();
+        let now = DATE.toLocaleTimeString();
+        document.getElementById("display").innerHTML = now;
+    }, 1000);
+}

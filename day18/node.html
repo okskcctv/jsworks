@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node 추가하기</title>
+    <script>
+        function myfunction(){
+            let newItem = document.createElement("li");
+            let textNode = document.createTextNode("Water");
+            newItem.appendChild(textNode); // li에 water를 연결
+            // <li>water</li>
+            let list = document.getElementById("myList");
+            list.insertBefore(newItem, list.childNodes[0]); // 맨 앞으로 올리는 법
+            // list.appendChild(newItem); // ul에 li를 연결
+            // <ul><li>water</li></ul>
+        }
+    </script>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <p>Click the button to insert an item to the list</p>
+    <!-- this.onclick 함수가 한번만 실행되도록 선언됨 -->
+    <!-- 누르면 onclick 함수가 작동하고 onclick에 공백이 입력되면서 이후에 작동하지 않음 -->
+    <button onclick="myfunction(); this.onclick=''">Try it</button>
+</body>
+</html>
