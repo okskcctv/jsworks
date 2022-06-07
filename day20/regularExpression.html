@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규 표현식</title>
+    <script>
+        // 문자열의 일치 여부 - test() 함수
+        // 방법1 - /표현식/
+        // 방법2 = RegExp(표현식) 함수 사용
+
+        let text = "Hello world!";
+
+        // 1.
+        let pat1 = /w/; // 표현식
+        let result = pat1.test(text); // 결과는 true or false로 나옴
+        console.log(result);
+
+        // 2.
+        let pat2 = new RegExp("Hello");
+        let result2 = pat2.test(text);
+        console.log(result2);
+
+        // 문자열의 글자수 일치 여부
+        let id = "a123";
+
+        // let regEx = /[0-9A-Za-z]/; 문자열중에 하나라도 일치하면 true가 나옴
+        // let regEx = /[0-9A-Za-z]{4}/; 문자열 4개를 찾음 [0-9]{4}일때 012면 갯수가 부족하여 false가 나옴
+        let regEx = /[0-9A-Za-z]+/;
+        let regEx2 = /[0-9A-Za-z]/;
+        console.log(regEx.test(id));
+        console.log(regEx2.test(id));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
