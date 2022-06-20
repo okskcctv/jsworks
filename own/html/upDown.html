@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운 게임</title>
+    <style>
+        a{text-decoration: none; color: #000;}
+    </style>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            let answer = 0; // 정답
+            let count = 1; // 횟수
+            let tryNum = 0; // 추측
+            let minNum = 0, maxNum = 101; // 최소, 최댓값
+
+            answer = Math.floor(Math.random() * 100) + 1;
+            console.log(answer); // 정답 체크용
+
+            $(document).on("keypress",function (event) {
+                if(event.keyCode === 13 ) {
+                    $("button").click(); // 버튼이 눌린것처럼 동작함
+                }
+            });
+
+            $("button").click(function(){
+                tryNum = parseInt($(".try").val());
+
+                
+                if(tryNum < 1 || tryNum > 100){
+                    document.querySelector(".result").innerHTML = "잘못 입력하셨습니다. 1~100 까지의 숫자중 하나를 입력하세요.";
+                    $(".try").val("");
+                }
+                else if(tryNum > answer){
+                    if(tryNum >= maxNum){
+                        document.querySelector(".result").innerHTML = tryNum + " 입력했습니다.<br>" + maxNum + "보다 작습니다. 더 작은 수를 입력해 보세요.";
+                        $(".try").val("");
+                    }
+                    else{
+                        document.querySelector(".result").innerHTML = tryNum + "보다 작습니다.";
+                        count++;
+                        $(".try").val("");
+                        document.querySelector(".max").innerHTML = tryNum;
+                        maxNum = tryNum;
+                    }
+                }
+                else if(tryNum < answer){
+                    if(tryNum <= minNum){
+                        document.querySelector(".result").innerHTML = tryNum + " 입력했습니다.<br>" + minNum + "보다 큽니다. 더 큰 수를 입력해 보세요.";
+                        $(".try").val("");
+                    }
+                    else{
+                        document.querySelector(".result").innerHTML = tryNum + "보다 큽니다.";
+                        count++;
+                        $(".try").val("");
+                        document.querySelector(".min").innerHTML = tryNum;
+                        minNum = tryNum;
+                    }
+                }
+                else if(tryNum == answer){
+                    document.querySelector(".result").innerHTML = tryNum + " 정답입니다.<br>" + count + "번 만에 맞추셨습니다.";
+                }
+                else{
+                    document.querySelector(".result").innerHTML = "잘못 입력하셨습니다. 1~100 까지의 숫자중 하나를 입력하세요.";
+                    $(".try").val("");
+                }
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>1~100사이의 숫자 중 하나가 선택되었습니다.<br>
+        현재 <span class="min">0</span> 보다 크고 <span class="max">101</span> 보다 작습니다.</p>
+    <p class="result"></p>
+    <input type="text" class="try">
+    <button type="button">입력</button>
+    <a href="">새로고침</a>
+</body>
+</html>
